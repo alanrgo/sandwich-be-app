@@ -1,0 +1,21 @@
+{
+  "name": "node-typescript-be-app",
+  "version": "1.0.0",
+  "description": "POC - server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "clear && npm run test:tslint && npm run test:unit",
+    "start": "node dist/index.js",
+    "watch-ts": "clear && tsc -pretty -w -p .",
+    "build": "tsc -pretty -p . && npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.5",
+    "express": "^4.16.4",
+    "jest": "^24.7.1",
+    "typescript": "^3.4.3"
+  }
+}
