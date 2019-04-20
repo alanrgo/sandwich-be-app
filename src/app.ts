@@ -1,5 +1,6 @@
 import * as Express from "express";
 import Api from "./api";
+import * as bodyParser from "body-parser";
 
 class App {
 
@@ -8,6 +9,7 @@ class App {
     }
 
     private mountRoutes (): void {
+        this.app.use(bodyParser.json());
         this.app.use('/', Api);
     }
 }

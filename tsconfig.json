@@ -12,7 +12,7 @@
       "dom" 
     ],
     "types": [
-      "node"
+      "node", "jest"
     ],
     "typeRoots": [
       "./node_modules/@types",
@@ -22,10 +22,9 @@
   },
   "include": [
     "src/**/*",
-    "test/**/*"
+    "tests/**/*"
   ],
   "exclude": [
-    "node_modules",
-    "test"
+    "node_modules"
   ]
 }
