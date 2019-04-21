@@ -23,18 +23,24 @@ describe("CreateSandwichFromObjectUseCase", () => {
             const sandwich: Sandwich = createSandwichFromObjectUseCase.createSandwich(content);
             expect(sandwich.ingredientWrappers[0].ingredient.type).toBe(Ingredient.IngredientTypes.LETTUCE);
             expect(sandwich.ingredientWrappers[0].quantity).toBe(5);
+            expect(sandwich.ingredientWrappers[0].ingredient.name).toBe("lettuce");
 
             expect(sandwich.ingredientWrappers[1].ingredient.type).toBe(Ingredient.IngredientTypes.BACON);
             expect(sandwich.ingredientWrappers[1].quantity).toBe(3);
+            expect(sandwich.ingredientWrappers[1].ingredient.name).toBe("bacon");
 
             expect(sandwich.ingredientWrappers[2].ingredient.type).toBe(Ingredient.IngredientTypes.EGG);
             expect(sandwich.ingredientWrappers[2].quantity).toBe(1);
+            expect(sandwich.ingredientWrappers[2].ingredient.name).toBe("egg");
 
             expect(sandwich.ingredientWrappers[3].ingredient.type).toBe(Ingredient.IngredientTypes.MEAT);
             expect(sandwich.ingredientWrappers[3].quantity).toBe(1);
+            expect(sandwich.ingredientWrappers[3].ingredient.name).toBe("meat");
 
             expect(sandwich.ingredientWrappers[4].ingredient.type).toBe(Ingredient.IngredientTypes.CHEESE);
             expect(sandwich.ingredientWrappers[4].quantity).toBe(1);
+            expect(sandwich.ingredientWrappers[4].ingredient.name).toBe("cheese");
+
         });
     });
 });
