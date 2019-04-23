@@ -20,6 +20,7 @@ export class SandwichController {
         try {
             const sandwich: Sandwich = this.createSandwichFromObjectUseCase.createSandwich(content);
             const price = this.computePriceUseCase.computePrice(sandwich, inflation);
+            res.header("Content-type", "application/json");
             res.json( { price } );
         } catch (e) {
             res.sendStatus(400);
@@ -40,6 +41,7 @@ export class SandwichController {
                     ingredients
                 }
             });
+            res.header("Content-type", "application/json");
             res.json(sandwichResponse);
         } catch (e) {
             res.sendStatus(400);
