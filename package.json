@@ -7,7 +7,8 @@
     "test": "clear && jest",
     "start": "node dist/src/index.js",
     "watch-ts": "clear && tsc -pretty -w -p .",
-    "build": "tsc -pretty -p . && npm run start"
+    "build": "tsc -pretty -p . && npm run start",
+    "test:coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
